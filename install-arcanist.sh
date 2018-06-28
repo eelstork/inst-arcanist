@@ -14,7 +14,7 @@ o=/dev/null
 echo Run apt-get update
 apt-get update >> $o
 echo "Install php, php-curl"
-apt-get install -y git php php-curl >> $o
+apt-get install -y git php php-curl
 echo "Install Arcanist in $dir"
 mkdir -p $dir && cd $dir
 git clone https://github.com/phacility/arcanist.git >> $o 2>&1
