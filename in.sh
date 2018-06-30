@@ -14,7 +14,8 @@ o=/dev/null
 echo Run apt-get update
 apt-get update >> $o
 echo "Install php, php-curl"
-apt-get install -y git php php-curl
+# php7.0-xml is for linters and test runners
+apt-get install -y git php php-curl php7.0-xml
 echo "Install Arcanist in $dir"
 mkdir -p $dir && cd $dir
 git clone https://github.com/phacility/arcanist.git >> $o 2>&1
